@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UniformUI.Module.DAL
 {
-    class IOSettingService
+    class IOSettingServices
     {
         #region 创建IO设置页的IO设置表
         /// <summary>

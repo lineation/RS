@@ -23,7 +23,7 @@ namespace UniformUI.Frm
         private Dlg_AddDevice addDeviceDialog = null;
         private SQLiteDataAdapter m_DeviceInfoDataAdapter;
         private DataTable m_DeviceInfoDataTable;
-        private VisionDeviceInfoService m_VisionDeviceInfoService = new VisionDeviceInfoService();
+        private VisionDeviceInfoServices m_VisionDeviceInfoService = new VisionDeviceInfoServices();
         private Dictionary<string, SuperTabItem> stiNameDic = new Dictionary<string, SuperTabItem>();
 
 

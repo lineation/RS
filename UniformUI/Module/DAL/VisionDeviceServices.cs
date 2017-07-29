@@ -9,7 +9,7 @@ using UniformUI.Utils;
 namespace UniformUI.Module.DAL
 {
     
-    class VisionDeviceService
+    class VisionDeviceServices
     {
         public void CreatVisionDeviceTable(string tableName)
         {

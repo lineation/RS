@@ -8,7 +8,7 @@ using UniformUI.Module.Model;
 
 namespace UniformUI.Module.DAL
 {
-    class SysUserService
+    class SysUserServices
     {
         #region 创建系统用户表
         /// <summary>

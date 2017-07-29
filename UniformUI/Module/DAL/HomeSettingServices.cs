@@ -10,7 +10,7 @@ using UniformUI.Utils;
 
 namespace UniformUI.Module.DAL
 {
-    class HomeSettingService
+    class HomeSettingServices
     {
         public void CreatHomeSettingTable(string tableName, SQLiteConnection conn)
         {

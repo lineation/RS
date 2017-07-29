@@ -8,7 +8,7 @@ using UniformUI.Utils;
 
 namespace UniformUI.Module.DAL
 {
-    class VisionDeviceInfoService
+    class VisionDeviceInfoServices
     {
         public void CreatVisionDeviceInfoTable(string tableName)
         {

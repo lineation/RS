@@ -7,7 +7,7 @@ using System.Data.SQLite;
 
 namespace UniformUI.Module.DAL
 {
-    class ParamSettingService
+    class ParamSettingServices
     {
         #region 创建参数设置页的浮点、整型、布尔和字符串类型的表
         /// <summary>

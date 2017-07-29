@@ -1019,7 +1019,7 @@ namespace UniformUI.Frm
         private void DgvBindSource()
         {
             //IO设置页
-            IOSettingService ios = new IOSettingService();
+            IOSettingServices ios = new IOSettingServices();
             ios.CreateInputSettingTable("InputSetting_Card0", m_Conn);
             ios.CreateInputSettingTable("InputSetting_Card1", m_Conn);
             ios.CreateOutputSettingTable("OutputSetting_Card0", m_Conn);
@@ -1029,7 +1029,7 @@ namespace UniformUI.Frm
             m_Card1InputDataTable = SQLiteUtils.DataSourceBindToDataGridView(dgv_Card1Input, out m_Card1InputDataAdapter, "test1", "InputSetting_Card1");
             m_Card1OutputDataTable = SQLiteUtils.DataSourceBindToDataGridView(dgv_Card1Output, out m_Card1OutputDataAdapter, "test1", "OutputSetting_Card1");
             //参数设置页
-            ParamSettingService ps = new ParamSettingService();
+            ParamSettingServices ps = new ParamSettingServices();
             ps.CreateFloatParamsTable("FloatParams", m_Conn);
             ps.CreateIntParamsTable("IntParams", m_Conn);
             ps.CreateBoolParamsTable("BoolParams", m_Conn);
@@ -1039,7 +1039,7 @@ namespace UniformUI.Frm
             m_ParamsBoolDataTable = SQLiteUtils.DataSourceBindToDataGridView(dgv_Bool, out m_ParamsBoolDataAdapter, "test1", "BoolParams");
             m_ParamsStringDataTable = SQLiteUtils.DataSourceBindToDataGridView(dgv_String, out m_ParamsStringDataAdapter, "test1", "StringParams");
             //回零设置页
-            HomeSettingService hs = new HomeSettingService();
+            HomeSettingServices hs = new HomeSettingServices();
             hs.CreatHomeSettingTable("HomingSetting", m_Conn);
             m_HomingDataTable = SQLiteUtils.DataSourceBindToDataGridView(dgv_Home, out m_HomingDataAdapter, "test1", "HomingSetting");
         }

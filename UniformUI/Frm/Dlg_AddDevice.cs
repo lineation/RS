@@ -18,7 +18,7 @@ namespace UniformUI.Frm
     {
         private Point m_Offset;
         private static log4net.ILog logger = null;
-        private VisionDeviceService visionDevices = new VisionDeviceService();
+        private VisionDeviceServices visionDevices = new VisionDeviceServices();
         private VisionDeviceModel visionDeviceModel = new VisionDeviceModel();
         private SQLiteDataAdapter m_DeviceDataAdapter;
         private DataTable m_DeviceDataTable;

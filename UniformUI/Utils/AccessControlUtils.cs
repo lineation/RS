@@ -38,7 +38,7 @@ namespace UniformUI.Utils
         public bool IsAuthorized(LoginMode loginMode)
         {
             SQLiteConnection conn = SQLiteUtils.GetConnection("test1");
-            SysUserService sysUser = new SysUserService();
+            SysUserServices sysUser = new SysUserServices();
             sysUser.CreateUserTable("User", conn);
             List<string> user = sysUser.SelectUserByUsername(conn, _username);
             if (user.Count != 0)
@@ -54,7 +54,7 @@ namespace UniformUI.Utils
         public bool IsAuthorized(string username, string password)
         {
             SQLiteConnection conn = SQLiteUtils.GetConnection("test1");
-            SysUserService sysUser = new SysUserService();
+            SysUserServices sysUser = new SysUserServices();
             sysUser.CreateUserTable("User", conn);
             List<string> user = sysUser.SelectUserByUsername(conn, username);
             if (user.Count != 0)
