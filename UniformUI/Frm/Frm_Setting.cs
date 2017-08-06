@@ -195,9 +195,40 @@ namespace UniformUI.Frm
         {
             //日志
             m_Logger = log4net.LogManager.GetLogger(this.GetType());
+            //DgvStyle01(dgv_Bool);
         }
         #endregion
-
+        public void DgvStyle01(DataGridView DgvDemo)
+        {
+            DgvDemo.ColumnHeadersVisible = true;
+            DgvDemo.RowHeadersVisible = true;
+            DgvDemo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DgvDemo.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DgvDemo.RowHeadersWidth = 46;
+            DgvDemo.RowTemplate.Height = 26;
+            DgvDemo.ReadOnly = true;
+            DgvDemo.AutoGenerateColumns = true;
+            DgvDemo.AllowUserToResizeColumns = false;
+            DgvDemo.AllowUserToResizeRows = false;
+            DgvDemo.MultiSelect = true;
+            DgvDemo.EnableHeadersVisualStyles = false;
+            DgvDemo.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#D5AAFF");
+            DgvDemo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            DgvDemo.ColumnHeadersHeight = 41;
+            DgvDemo.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            DgvDemo.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            DgvDemo.GridColor = ColorTranslator.FromHtml("#B76FFF");
+            DgvDemo.RowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#EEDDFF");
+            DgvDemo.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#DBB7FF");
+            DgvDemo.RowHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C891FF");
+            //DgvDemo.RowStateChanged += DgvDemo_RowStateChanged;
+            DgvDemo.RowHeadersDefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#860DFF");
+            DgvDemo.RowHeadersDefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#9933FF");
+            DgvDemo.RowsDefaultCellStyle.SelectionBackColor = ColorTranslator.FromHtml("#AC59FF");
+            DgvDemo.DefaultCellStyle.ForeColor = ColorTranslator.FromHtml("#4E009B");
+            DgvDemo.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DgvDemo.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
         #region 事件：绘制DataGridView样式
         //修改IO设置页的DataGridView样式
         private void card0Input_dataGridView_Paint(object sender, PaintEventArgs e)

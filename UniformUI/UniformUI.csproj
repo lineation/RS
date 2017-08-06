@@ -259,12 +259,12 @@
     </Compile>
     <Compile Include="Module\BLL\Test.cs" />
     <Compile Include="Module\BLL\UserActions.cs" />
-    <Compile Include="Module\DAL\HomeSettingService.cs" />
-    <Compile Include="Module\DAL\IOSettingService.cs" />
-    <Compile Include="Module\DAL\ParamSettingService.cs" />
-    <Compile Include="Module\DAL\SysUserService.cs" />
-    <Compile Include="Module\DAL\VisionDeviceService.cs" />
-    <Compile Include="Module\DAL\VisionDeviceInfoService.cs" />
+    <Compile Include="Module\DAL\HomeSettingServices.cs" />
+    <Compile Include="Module\DAL\IOSettingServices.cs" />
+    <Compile Include="Module\DAL\ParamSettingServices.cs" />
+    <Compile Include="Module\DAL\SysUserServices.cs" />
+    <Compile Include="Module\DAL\VisionDeviceInfoServices.cs" />
+    <Compile Include="Module\DAL\VisionDeviceServices.cs" />
     <Compile Include="Module\Model\Cnst.cs" />
     <Compile Include="Frm\Frm_Main.cs">
       <SubType>Form</SubType>
