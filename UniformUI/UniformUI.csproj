@@ -297,6 +297,12 @@
     <Compile Include="RSControl\RSButton1.Designer.cs">
       <DependentUpon>RSButton1.cs</DependentUpon>
     </Compile>
+    <Compile Include="RSControl\UILog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RSControl\UILog.Designer.cs">
+      <DependentUpon>UILog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\AccessControlUtils.cs" />
     <Compile Include="Utils\AutoSizeForm.cs" />
     <Compile Include="Utils\DataGridViewUtils.cs" />
@@ -367,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RSControl\RSButton1.resx">
       <DependentUpon>RSButton1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSControl\UILog.resx">
+      <DependentUpon>UILog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\WindowsFormsApplication9.Utils.SettingUtils.datasource" />
     <None Include="Properties\Settings.settings">

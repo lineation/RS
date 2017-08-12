@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Home));
             this.metroStatusBar1 = new DevComponents.DotNetBar.Metro.MetroStatusBar();
+            this.frButtonA2 = new frButtonA.frButtonA();
             this.frButtonA1 = new frButtonA.frButtonA();
             this.controlContainerItem2 = new DevComponents.DotNetBar.ControlContainerItem();
             this.switchButtonItem1 = new DevComponents.DotNetBar.SwitchButtonItem();
@@ -39,7 +40,7 @@
             this.progressBarItem1 = new DevComponents.DotNetBar.ProgressBarItem();
             this.checkBoxItem1 = new DevComponents.DotNetBar.CheckBoxItem();
             this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
-            this.frButtonA2 = new frButtonA.frButtonA();
+            this.uiLog = new UniformUI.RSControl.UILog();
             this.metroStatusBar1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,27 @@
             this.metroStatusBar1.Size = new System.Drawing.Size(1045, 74);
             this.metroStatusBar1.TabIndex = 0;
             this.metroStatusBar1.Text = "metroStatusBar1";
+            // 
+            // frButtonA2
+            // 
+            this.frButtonA2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("frButtonA2.BackgroundImage")));
+            this.frButtonA2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.frButtonA2.Caption1 = "Caption1";
+            this.frButtonA2.Caption2 = "Caption2";
+            this.frButtonA2.Font1 = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.frButtonA2.Font2 = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.frButtonA2.ForeColor1 = System.Drawing.SystemColors.ControlText;
+            this.frButtonA2.ForeColor2 = System.Drawing.SystemColors.ControlText;
+            this.frButtonA2.Image1 = ((System.Drawing.Bitmap)(resources.GetObject("frButtonA2.Image1")));
+            this.frButtonA2.Image2 = ((System.Drawing.Bitmap)(resources.GetObject("frButtonA2.Image2")));
+            this.frButtonA2.IsLabel = false;
+            this.frButtonA2.Location = new System.Drawing.Point(85, 3);
+            this.frButtonA2.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
+            this.frButtonA2.MaximumSize = new System.Drawing.Size(533, 752);
+            this.frButtonA2.MinimumSize = new System.Drawing.Size(28, 40);
+            this.frButtonA2.Name = "frButtonA2";
+            this.frButtonA2.Size = new System.Drawing.Size(70, 70);
+            this.frButtonA2.TabIndex = 1;
             // 
             // frButtonA1
             // 
@@ -134,26 +156,12 @@
             this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
             this.controlContainerItem1.Name = "controlContainerItem1";
             // 
-            // frButtonA2
+            // uiLog
             // 
-            this.frButtonA2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("frButtonA2.BackgroundImage")));
-            this.frButtonA2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.frButtonA2.Caption1 = "Caption1";
-            this.frButtonA2.Caption2 = "Caption2";
-            this.frButtonA2.Font1 = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.frButtonA2.Font2 = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.frButtonA2.ForeColor1 = System.Drawing.SystemColors.ControlText;
-            this.frButtonA2.ForeColor2 = System.Drawing.SystemColors.ControlText;
-            this.frButtonA2.Image1 = ((System.Drawing.Bitmap)(resources.GetObject("frButtonA2.Image1")));
-            this.frButtonA2.Image2 = ((System.Drawing.Bitmap)(resources.GetObject("frButtonA2.Image2")));
-            this.frButtonA2.IsLabel = false;
-            this.frButtonA2.Location = new System.Drawing.Point(85, 3);
-            this.frButtonA2.Margin = new System.Windows.Forms.Padding(5, 8, 5, 8);
-            this.frButtonA2.MaximumSize = new System.Drawing.Size(533, 752);
-            this.frButtonA2.MinimumSize = new System.Drawing.Size(28, 40);
-            this.frButtonA2.Name = "frButtonA2";
-            this.frButtonA2.Size = new System.Drawing.Size(70, 70);
-            this.frButtonA2.TabIndex = 1;
+            this.uiLog.Location = new System.Drawing.Point(240, 368);
+            this.uiLog.Name = "uiLog";
+            this.uiLog.Size = new System.Drawing.Size(545, 150);
+            this.uiLog.TabIndex = 1;
             // 
             // Frm_Home
             // 
@@ -162,6 +170,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1045, 628);
+            this.Controls.Add(this.uiLog);
             this.Controls.Add(this.metroStatusBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Home";
@@ -186,6 +195,7 @@
         private frButtonA.frButtonA frButtonA1;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem2;
         private frButtonA.frButtonA frButtonA2;
+        private RSControl.UILog uiLog;
 
 
 

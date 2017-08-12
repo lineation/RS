@@ -8,20 +8,22 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniformUI.Module.Model;
 
 namespace UniformUI.Frm
 {
+    
     public partial class Frm_Home : Form
     {
         public Frm_Home()
         {
             InitializeComponent();
+            Common.uiLogAction += uiLog.AppendLogMsg;
         }
 
         private void Frm_Home_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

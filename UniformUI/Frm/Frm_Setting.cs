@@ -12,6 +12,7 @@ using HalconDotNet;
 using UniformUI.Module;
 using UniformUI.Module.BLL;
 using UniformUI.Module.DAL;
+using UniformUI.Module.Model;
 using UniformUI.Utils;
 
 namespace UniformUI.Frm
@@ -195,6 +196,11 @@ namespace UniformUI.Frm
         {
             //日志
             m_Logger = log4net.LogManager.GetLogger(this.GetType());
+//             this.BeginInvoke(new Action(() => {
+//                 uiLog.AppendLogMsg(DateTime.Now.ToShortTimeString() + i.ToString() + ":设置页面加载成功...");
+//             }));
+            Common.uiLogAction(DateTime.Now.ToShortTimeString()  + ":设置页面加载成功...");
+           
             //DgvStyle01(dgv_Bool);
         }
         #endregion
@@ -293,7 +299,7 @@ namespace UniformUI.Frm
             Utils.StyleUtils.SetDataGridViewStyle(dgv_String, e, m_RGB);
         }
         #endregion
-
+        
         #region 事件："全部保存按钮"点击
         private void buttonItem1_Click(object sender, EventArgs e)
         {

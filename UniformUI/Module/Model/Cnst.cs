@@ -44,5 +44,9 @@ namespace UniformUI.Module.Model
     {
         public static  bool isShowKeyBoard = false;
     }
-       
+
+    public static class Common
+    {
+        public static Action<string> uiLogAction { get; set; }
+    }
 }
