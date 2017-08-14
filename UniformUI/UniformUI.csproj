@@ -37,6 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -265,7 +266,11 @@
     <Compile Include="Module\DAL\SysUserServices.cs" />
     <Compile Include="Module\DAL\VisionDeviceInfoServices.cs" />
     <Compile Include="Module\DAL\VisionDeviceServices.cs" />
-    <Compile Include="Module\Model\Cnst.cs" />
+    <Compile Include="Module\Model\AdlinkModtionCard.cs" />
+    <Compile Include="Module\Model\APS168.cs" />
+    <Compile Include="Module\Model\APS_Define.cs" />
+    <Compile Include="Module\Model\Axis.cs" />
+    <Compile Include="Module\Model\Common.cs" />
     <Compile Include="Frm\Frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,8 +283,16 @@
     <Compile Include="Frm\Frm_Setting.Designer.cs">
       <DependentUpon>Frm_Setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Module\Model\Cylinder.cs" />
     <Compile Include="Module\Model\HomingSetting.cs" />
+    <Compile Include="Module\Model\IOCard.cs" />
+    <Compile Include="Module\Model\LightController.cs" />
+    <Compile Include="Module\Model\MotionCard.cs" />
+    <Compile Include="Module\Model\Signal.cs" />
+    <Compile Include="Module\Model\Switch.cs" />
     <Compile Include="Module\Model\SysUserModel.cs" />
+    <Compile Include="Module\Model\UWC300.cs" />
+    <Compile Include="Module\Model\UWC300Card.cs" />
     <Compile Include="Module\Model\VisionDeviceInfoModel.cs" />
     <Compile Include="Module\Model\VisionDeviceModel.cs" />
     <Compile Include="Module\Model\UserException.cs" />
@@ -305,14 +318,19 @@
     </Compile>
     <Compile Include="Utils\AccessControlUtils.cs" />
     <Compile Include="Utils\AutoSizeForm.cs" />
+    <Compile Include="Utils\DataConvertUtils.cs" />
     <Compile Include="Utils\DataGridViewUtils.cs" />
+    <Compile Include="Utils\FTPUtils.cs" />
+    <Compile Include="Utils\NetUtils.cs" />
     <Compile Include="Utils\OpaqueLayer.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Utils\OpaqueLayerUtils.cs" />
+    <Compile Include="Utils\XmlUtils.cs" />
+    <Compile Include="Utils\ZipUtils.cs" />
     <Compile Include="Utils\StyleUtils.cs" />
     <Compile Include="Utils\INIUtils.cs" />
-    <Compile Include="Utils\FileWRUtils.cs" />
+    <Compile Include="Utils\FileUtils.cs" />
     <Compile Include="Utils\SettingUtils.cs" />
     <Compile Include="Utils\SQLiteUtils.cs" />
     <Compile Include="Utils\TCPIPUtils.cs" />
@@ -389,7 +407,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Config\App.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -407,6 +425,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\setting.xml" />
+    <Content Include="Resources\LightOff.bmp" />
+    <None Include="Resources\LightOff1.bmp" />
+    <Content Include="Resources\LightOn.bmp" />
+    <None Include="Resources\LightOn1.bmp" />
     <Content Include="Resources\Startup.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -13,6 +13,7 @@ using UniformUI.Module;
 using UniformUI.Module.BLL;
 using UniformUI.Module.DAL;
 using UniformUI.Module.Model;
+using UniformUI.Properties;
 using UniformUI.Utils;
 
 namespace UniformUI.Frm
@@ -199,7 +200,7 @@ namespace UniformUI.Frm
 //             this.BeginInvoke(new Action(() => {
 //                 uiLog.AppendLogMsg(DateTime.Now.ToShortTimeString() + i.ToString() + ":设置页面加载成功...");
 //             }));
-            Common.uiLogAction(DateTime.Now.ToShortTimeString()  + ":设置页面加载成功...");
+            Common.AppendUiLog("设置页面加载成功...");
            
             //DgvStyle01(dgv_Bool);
         }
@@ -257,26 +258,122 @@ namespace UniformUI.Frm
             Utils.StyleUtils.SetDataGridViewStyle(dgv_Card1Output, e, m_RGB);
         }
 
-        private void dgv_Card0Input_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card0Input, m_Card0InputDataTable, 4);
-        }
-
-        private void dgv_Card0Output_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card0Output, m_Card0OutputDataTable, 4);
-        }
-
-        private void dgv_Card1Input_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card1Input, m_Card1InputDataTable, 4);
-        }
+//         private void dgv_Card0Input_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+//         {
+//             //StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card0Input, m_Card0InputDataTable, 4);
+//         }
+// 
+//         private void dgv_Card0Output_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+//         {
+//             //StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card0Output, m_Card0OutputDataTable, 4);
+//         }
+// 
+//         private void dgv_Card1Input_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+//         {
+//             //StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card1Input, m_Card1InputDataTable, 4);
+//         }
 
         private void dgv_Card1Output_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card1Output, m_Card1OutputDataTable, 4);
+            //StyleUtils.DataGridViewCellBackcolorPaint(dgv_Card1Output, m_Card1OutputDataTable, 4);
         }
 
+        private void dgv_Card0Input_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgv_Card0Input.Columns[e.ColumnIndex].HeaderText.Equals("状态"))
+            {
+                bool flg = false;
+                try
+                {
+                    flg = Convert.ToBoolean(m_Card0InputDataTable.Rows[e.RowIndex][e.ColumnIndex + 1].ToString());
+                }
+                catch
+                {
+                    return;
+                }
+                if (flg == true)
+                {
+                    e.Value = Resources.LightOn;
+                }
+                if (flg == false)
+                {
+                    e.Value = Resources.LightOff;
+                }
+            }
+
+        }
+
+        private void dgv_Card0Output_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgv_Card0Output.Columns[e.ColumnIndex].HeaderText.Equals("状态"))
+            {
+                bool flg = false;
+                try
+                {
+                    flg = Convert.ToBoolean(m_Card0OutputDataTable.Rows[e.RowIndex][e.ColumnIndex + 1].ToString());
+                }
+                catch
+                {
+                    return;
+                }
+                if (flg == true)
+                {
+                    e.Value = Resources.LightOn;
+                }
+                if (flg == false)
+                {
+                    e.Value = Resources.LightOff;
+                }
+            }
+        }
+
+        private void dgv_Card1Input_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgv_Card1Input.Columns[e.ColumnIndex].HeaderText.Equals("状态"))
+            {
+                bool flg = false;
+                try
+                {
+                    flg = Convert.ToBoolean(m_Card1InputDataTable.Rows[e.RowIndex][e.ColumnIndex + 1].ToString());
+                }
+                catch
+                {
+                    return;
+                }
+                if (flg == true)
+                {
+                    e.Value = Resources.LightOn;
+                }
+                if (flg == false)
+                {
+                    e.Value = Resources.LightOff;
+                }
+            }
+        }
+
+        private void dgv_Card1Output_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgv_Card1Output.Columns[e.ColumnIndex].HeaderText.Equals("状态"))
+            {
+                bool flg = false;
+                try
+                {
+                    flg = Convert.ToBoolean(m_Card1OutputDataTable.Rows[e.RowIndex][e.ColumnIndex + 1].ToString());
+                }
+                catch
+                {
+                    return;
+                }
+                if (flg == true)
+                {
+                    e.Value = Resources.LightOn;
+                }
+                if (flg == false)
+                {
+                    e.Value = Resources.LightOff;
+                }
+            }
+        }
 
         //修改参数设置页的DataGridView样式
         private void dgv_Float_Paint(object sender, PaintEventArgs e)
@@ -1371,6 +1468,12 @@ namespace UniformUI.Frm
         }
 
         #endregion
+
+
+
+        
+
+       
        
     }
 }

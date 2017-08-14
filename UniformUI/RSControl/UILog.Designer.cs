@@ -33,6 +33,8 @@
             // 
             // txtLogMsg
             // 
+            this.txtLogMsg.BackColor = System.Drawing.Color.White;
+            this.txtLogMsg.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtLogMsg.Location = new System.Drawing.Point(0, 0);
             this.txtLogMsg.Multiline = true;
             this.txtLogMsg.Name = "txtLogMsg";

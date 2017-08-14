@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using UniformUI.Properties;
 
 namespace UniformUI.Utils
 {
@@ -44,7 +45,7 @@ namespace UniformUI.Utils
                 }
                 catch (InvalidCastException exc)
                 {
-                    FileWRUtils.WriteLogToTxt("改变窗体" + form.Text + "颜色异常：" + exc.Message + ctl.Name);
+                    FileUtils.WriteLogToTxt("改变窗体" + form.Text + "颜色异常：" + exc.Message + ctl.Name);
                 }
             }
         }
@@ -72,6 +73,7 @@ namespace UniformUI.Utils
             dataGridView.Cursor = Cursors.Hand;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView.AllowUserToAddRows = false;
 
         }
         #endregion

@@ -18,12 +18,12 @@ namespace UniformUI.Frm
         public Frm_Home()
         {
             InitializeComponent();
-            Common.uiLogAction += uiLog.AppendLogMsg;
+            Common.AppendUiLog += uiLog.AppendLogMsg;
         }
 
         private void Frm_Home_Load(object sender, EventArgs e)
         {
-
+            Common.AppendUiLog("home页面加载成功...");
         }
     }
 }

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RSAIM>
+  <Machine>
+    
+    <IOCard>
+      <!--IO卡的名称：-->
+      <Name></Name>
+      <!--IO卡的数量-->
+      <Num></Num>
+    </IOCard>
+    
+    <MotionCard>
+      <!--运动卡的名称：-->
+      <Name></Name>
+      <!--运动卡的数量-->
+      <Num></Num>
+    </MotionCard>
+    
+    <Camara>
+      <!--相机的名称：-->
+      <Name></Name>
+      <!--相机的数量-->
+      <Num></Num>
+    </Camara>
+    
+    <Laser>
+      <!--激光的名称：-->
+      <Name></Name>
+      <!--激光的数量-->
+      <Num></Num>
+    </Laser>
+    
+  </Machine>
+</RSAIM>

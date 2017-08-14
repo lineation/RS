@@ -20,18 +20,18 @@ namespace UniformUI.RSControl
 
         private void UILog_Load(object sender, EventArgs e)
         {
-            this.txtLogMsg.Multiline = true;//多选， 一般在界面中就设置了
-            this.txtLogMsg.ScrollBars = ScrollBars.Vertical;//日志输出显示纵向滚动条
-            this.txtLogMsg.ReadOnly = true; //输出日志只读
-            this.txtLogMsg.TextChanged += txtLogMsg_TextChanged;//注册改变事件
+            this.txtLogMsg.Multiline = true;
+            this.txtLogMsg.ScrollBars = ScrollBars.Vertical;
+            this.txtLogMsg.ReadOnly = true; 
+            this.txtLogMsg.TextChanged += txtLogMsg_TextChanged;
             //int.TryParse(System.Configuration.ConfigurationManager.AppSettings["MAX_LOGMSG_TEXT_LENGTH"], out _maxLogmsgTextLength);//优先使用配置文件配置的值
         }
 
         private void txtLogMsg_TextChanged(object sender, EventArgs e)
         {
-            txtLogMsg.SelectionStart = txtLogMsg.Text.Length + 10;//设置选中文字的开始位置为文本框的文字的长度，如果超过了文本长度，则默认为文本的最后。
-            txtLogMsg.SelectionLength = 0;//设置被选中文字的长度为0（将光标移动到文字最后）
-            txtLogMsg.ScrollToCaret();//将滚动条移动到光标位置
+            txtLogMsg.SelectionStart = txtLogMsg.Text.Length + 10;
+            txtLogMsg.SelectionLength = 0;
+            txtLogMsg.ScrollToCaret();
         }
 
         public void AppendLogMsg(string msg)
@@ -39,8 +39,8 @@ namespace UniformUI.RSControl
             //在UI线程中执行
             txtLogMsg.BeginInvoke(new Action(() =>
             {
-                txtLogMsg.AppendText(msg);
-                txtLogMsg.AppendText(Environment.NewLine);//追加换行符
+                txtLogMsg.AppendText(DateTime.Now.ToString()+ "：" + msg );
+                txtLogMsg.AppendText(Environment.NewLine);
             }));
         }
 

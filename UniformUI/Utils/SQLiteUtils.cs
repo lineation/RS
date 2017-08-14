@@ -94,7 +94,7 @@ namespace UniformUI.Utils
         public static void DeleteToInputSettingTable(SQLiteConnection conn, List<string> dgvSelectedRowList) 
         {
             string sql = "DELETE FROM InputSetting WHERE " + "Input名称 = " + "'" + dgvSelectedRowList[1] + "'";
-            Utils.FileWRUtils.WriteLogToTxt(sql);
+            Utils.FileUtils.WriteLogToTxt(sql);
             SQLiteCommand cmdInsert = new SQLiteCommand(sql, conn);
             try
             {

@@ -49,6 +49,12 @@ namespace UniformUI.Frm
             homeForm = new Frm_Home();
             loginForm = new Frm_Login();
             paramsSettingDialog = new Dlg_FloatAndIntParamsSetting();
+
+
+//             string xmlPath =  FileUtils.GetAppDirectory() + @"\Config\setting.xml";
+//             XmlUtils xmlUtils = new XmlUtils(xmlPath);
+//             meiz = xmlUtils.GetValue(@"//root/meiz");
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
